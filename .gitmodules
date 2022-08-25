@@ -10,3 +10,6 @@
 [submodule "lib/solenv"]
 	path = lib/solenv
 	url = https://github.com/memester-xyz/solenv
+[submodule "lib/openzeppelin-contracts-upgradeable.git"]
+	path = lib/openzeppelin-contracts-upgradeable.git
+	url = https://github.com/openzeppelin/openzeppelin-contracts-upgradeable.git
